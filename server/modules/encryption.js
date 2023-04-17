@@ -1,4 +1,5 @@
 // No changes should be required in this file
+//deals with encryption
 
 const bcrypt = require('bcryptjs');
 
