@@ -19,7 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import GamePageOne from '../NewGame/NewGame';
+import Pet from '../Pet/Pet';
 
 import './App.css';
 
@@ -111,8 +111,8 @@ function App() {
             }
           </Route>
           
-          <Route path="/gamePageOne">
-          <GamePageOne />
+          <Route path="/pet">
+          <Pet />
         </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}

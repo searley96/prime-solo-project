@@ -18,7 +18,7 @@ function UserPage() {
   const history = useHistory();
 
   const toNewGame = () => {
-    history.push("/gamePageOne")
+    history.push("/pet")
   }
   
   return (
