@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 //TO-DO: add back button
 
 function Pet() {
+//state
   const [petOne, setPetOne] = useState("");
   const [petTwo, setPetTwo] = useState("");
   const [petThree, setPetThree] = useState("");

@@ -19,8 +19,10 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import Pet from '../Pet/Pet';
-import Vehicle from '../Vehicle/Vehicle';
+import Pet from '../GamePages/Pet';
+import Vehicle from '../GamePages/Vehicle';
+import City from '../GamePages/City';
+import Hobby from '../GamePages/Hobby';
 
 import './App.css';
 
@@ -118,6 +120,14 @@ function App() {
 
         <Route path="/vehicle">
           <Vehicle />
+        </Route>
+
+        <Route path="/city">
+          <City />
+        </Route>
+
+        <Route path="/hobby">
+          <Hobby />
         </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
