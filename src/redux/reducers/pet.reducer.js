@@ -1,4 +1,4 @@
-const petReducer = (state = [], action) => {
+const petReducer = (state = {}, action) => {
     switch (action.type) {
       case "SAVE_PET":
         return action.payload;

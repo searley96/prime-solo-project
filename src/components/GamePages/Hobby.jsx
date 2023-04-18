@@ -25,7 +25,7 @@ const saveHobbyInputs = () => {
       },
     });
     
-    history.push("/vehicle");
+    history.push("/viewAll");
   };
 
 
@@ -37,25 +37,25 @@ const saveHobbyInputs = () => {
         <h3>Submit at least two answers!</h3>
         <input
           type="text"
-          placeholder="Hobby One"
+          placeholder="Talent One"
           value={hobbyOne.inputs}
           onChange={(event) => setHobbyOne(event.target.value)}
         ></input>
         <input
           type="text"
-          placeholder="Hobby Two"
+          placeholder="Talent Two"
           value={hobbyTwo.inputs}
           onChange={(event) => setHobbyTwo(event.target.value)}
         ></input>
         <input
           type="text"
-          placeholder="Hobby Three"
+          placeholder="Talent Three"
           value={hobbyThree.inputs}
           onChange={(event) => setHobbyThree(event.target.value)}
         ></input>
         <input
           type="text"
-          placeholder="Hobby Four"
+          placeholder="Talent Four"
           value={hobbyFour.inputs}
           onChange={(event) => setHobbyFour(event.target.value)}
         ></input>
