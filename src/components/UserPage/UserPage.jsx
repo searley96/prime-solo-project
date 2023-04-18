@@ -17,6 +17,7 @@ function UserPage() {
 
   const history = useHistory();
 
+  //will take user to first game play page when new game button clicked
   const toNewGame = () => {
     history.push("/pet")
   }

@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import Pet from '../Pet/Pet';
+import Vehicle from '../Vehicle/Vehicle';
 
 import './App.css';
 
@@ -113,6 +114,10 @@ function App() {
           
           <Route path="/pet">
           <Pet />
+        </Route>
+
+        <Route path="/vehicle">
+          <Vehicle />
         </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
