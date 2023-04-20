@@ -24,6 +24,7 @@ import Vehicle from '../GamePages/Vehicle';
 import City from '../GamePages/City';
 import Hobby from '../GamePages/Hobby';
 import ViewAllPage from '../ViewAllPage/ViewAllPage';
+import ResultsPage from '../ResultsPage/ResultsPage';
 
 import './App.css';
 
@@ -133,6 +134,10 @@ function App() {
 
         <Route path="/viewAll">
           <ViewAllPage />
+        </Route>
+
+        <Route path='/results'>
+          <ResultsPage/>
         </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}

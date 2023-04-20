@@ -5,6 +5,8 @@ import petReducer from './pet.reducer';
 import vehicleReducer from './vehicle.reducer';
 import cityReducer from './city.reducer';
 import hobbyReducer from './hobby.reducer';
+import gamesReducer from './getGames.reducer';
+import latestReducer from './latestGames.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -19,6 +21,8 @@ const rootReducer = combineReducers({
   vehicleReducer,
   cityReducer,
   hobbyReducer,
+  gamesReducer,
+  latestReducer,
 });
 
 export default rootReducer;
