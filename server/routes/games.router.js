@@ -19,20 +19,6 @@ router.get("/", rejectUnauthenticated, (req, res) => {
     });
 });
 
-router.get("/api/latest", rejectUnauthenticated, (req, res) => {
-  // GET route code to get latest games 
-  let queryText = `SELECT * FROM "game_result" ORDER BY "id" DESC LIMIT 1`;
-  pool
-    .query(queryText)
-    .then((result) => {
-      res.send(result.rows);
-    })
-    .catch((error) => {
-      console.log(error);
-      res.sendStatus(500);
-    });
-});
-
 //random generator functions
 function randomPetGenerator(pet) {
   let r = Math.floor(Math.random() * 4);
@@ -129,6 +115,20 @@ router.post("/", rejectUnauthenticated, (req, res) => {
     .query(queryText, queryValues)
     .then((result) => {
       res.sendStatus(201);
+    })
+    .catch((error) => {
+      console.log(error);
+      res.sendStatus(500);
+    });
+});
+
+router.get("/latest", rejectUnauthenticated, (req, res) => {
+  // GET route code to get latest games 
+  let queryText = `SELECT * FROM "game_result" ORDER BY "id" DESC LIMIT 1`;
+  pool
+    .query(queryText)
+    .then((result) => {
+      res.send(result.rows);
     })
     .catch((error) => {
       console.log(error);

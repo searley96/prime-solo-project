@@ -2,9 +2,6 @@ import axios from "axios";
 import { put, takeLatest } from "redux-saga/effects";
 
 //saga get
-
-//🔴TO-DO: finish getLatestGame saga
-
 function* getGames() {
   try {
     const gameList = yield axios.get("/api/games");
@@ -19,7 +16,7 @@ function* getGames() {
 //saga to get latest game 
 function* getLatestGame() {
   try {
-    const latestGame = yield axios.get("/api/latest");
+    const latestGame = yield axios.get("/api/games/latest");
     console.log("latestGame", latestGame);
 
     yield put({ type: "SET_LATEST_GAMES", payload: latestGame.data });

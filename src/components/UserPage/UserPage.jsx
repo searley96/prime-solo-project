@@ -44,9 +44,17 @@ function UserPage() {
     });
   };
 
+  //🔴TO-DO: default profile image displayed, ability to edit profile image
+  function handleEditClick() {
+    console.log("in handleEditClick");
+    // dispatch({type: 'SET_EDIT_IMAGE', payload: })
+    history.push("/edit");
+  }
+
   return (
     <div className="container">
-      <img src={user.image_url} width='200'/>
+      <img src={user.image_url} width="200" />
+      <button onClick={handleEditClick}>Edit Photo</button>
       <h2>Welcome, {user.username}!</h2>
       {/* <p>Your ID is: {user.id}</p> */}
 
@@ -60,8 +68,9 @@ function UserPage() {
           </div>
         ))}
 
-      <button onClick={toNewGame}>New Game</button>
       <LogOutButton className="btn" />
+
+      <button onClick={toNewGame}>New Game</button>
     </div>
   );
 }
