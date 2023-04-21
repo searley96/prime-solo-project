@@ -3,6 +3,7 @@ import LogOutButton from "../LogOutButton/LogOutButton";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { useEffect } from "react";
+import './UserPage.css'
 
 //🔴TO-DO: default profile image displayed, ability to edit profile image
 //🔴TO-DO: GRID VIEW BY GAME -- Can delete each game
@@ -52,25 +53,35 @@ function UserPage() {
   }
 
   return (
+    <div id="paper">
+  <div id="pattern">
+    <div id="content">
     <div className="container">
-      <img src={user.image_url} width="200" />
+      <img src={user.image_url} />
+      <br></br>
       <button onClick={handleEditClick}>Edit Photo</button>
       <h2>Welcome, {user.username}!</h2>
       {/* <p>Your ID is: {user.id}</p> */}
-
+     <h2>Your Games</h2>
       {games &&
         games.map((game) => (
-          <div key={game.id}>
-            <br></br>
-            Pet: {game.pets} Vehicle: {game.vehicle} City: {game.city} Hobby:{" "}
-            {game.hobby}
-            <button onClick={() => handleDelete(game.id)}>Delete</button>
-          </div>
+          <div className="grid-item" key={game.id}>
+          <p>
+            Pet: {game.pets}<br />
+            Vehicle: {game.vehicle}<br />
+            City: {game.city}<br />
+            Hobby: {game.hobby}<br />
+          </p>
+          <button onClick={() => handleDelete(game.id)}>Delete</button>
+        </div>
         ))}
-
+<br></br>
       <LogOutButton className="btn" />
 
       <button onClick={toNewGame}>New Game</button>
+    </div>
+    </div>
+    </div>
     </div>
   );
 }
