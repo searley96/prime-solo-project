@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+import './ViewAllPage.css'
 
 function ViewAllPage() {
   //grab inputs from each game page from store (rootreducer)
@@ -33,38 +34,42 @@ function ViewAllPage() {
 
 
   return (
-    <div>
-      <h1>View All</h1>
+    <div id="viewAll-paper">
+    <div id="pattern">
+  <div id="content">
+      <h1>M.A.S.H.</h1>
+      <br></br>
       <h2>Pets:</h2>
       <ul>
         <li>{pet.petOne}</li>
         <li>{pet.petTwo}</li>
         <li>{pet.petThree}</li>
-        <li>{pet.petFour}</li>
+       
       </ul>
       <h2>Vehicles:</h2>
       <ul>
         <li>{vehicle.vehicleOne}</li>
         <li>{vehicle.vehicleTwo}</li>
         <li>{vehicle.vehicleThree}</li>
-        <li>{vehicle.vehicleFour}</li>
+       
       </ul>
       <h2>Cities:</h2>
       <ul>
         <li>{city.cityOne}</li>
         <li>{city.cityTwo}</li>
         <li>{city.cityThree}</li>
-        <li>{city.cityFour}</li>
+    
       </ul>
       <h2>Special Talents:</h2>
       <ul>
         <li>{hobby.hobbyOne}</li>
         <li>{hobby.hobbyTwo}</li>
         <li>{hobby.hobbyThree}</li>
-        <li>{hobby.hobbyFour}</li>
       </ul>
 
-      <button onClick={handleSubmit}>Get My Results!</button>
+      <button id='next-bttn' onClick={handleSubmit}>Get My Results!</button>
+    </div>
+    </div>
     </div>
   );
 }

@@ -1,37 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
 body {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   background-image: url(https://garden.spoonflower.com/c/11578583/p/f/l/CPylg_nPMUQiy_OsdzCSrO0w5SXQWRX6mj3-L3_IqGapXGQRND7h/Rainbow%20Leopard%20.jpg);
-  /* background-repeat: no-repeat; */
-  /* background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  font-family: sans-serif; */
 }
 
-
+#user-header {
+  position: absolute;
+  top: 0px;
+  left: 30%;
+  color: #00acb0;
+  letter-spacing: 3px;
+  font-size: 50px;
+}
 
 /* styling paper */
-#paper {
-    width: 600px;
-    height: 150vh;
-    position: relative;
-    margin: 20px auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    background-color: white;
-    box-shadow: 0px 0px 5px 0px #888;
-  }
+#user-paper {
+  width: 600px;
+  height: 200vh;
+  position: relative;
+  margin: 20px auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+}
 
 /* styling red vertical line */
-#paper::before {
-  content: '';
+#user-paper::before {
+  content: "";
   width: 2px;
   height: 100%;
   position: absolute;
   top: 0;
   left: 40px;
-  background-color: #00acb0;
+  background-color: pink;
 }
 
 /* styling blue horizontal lines */
@@ -46,35 +48,92 @@ body {
   padding-left: 56px;
   padding-right: 16px;
   line-height: 25px;
-  font-family: 'Dancing Script', cursive;
+  font-family: "Dancing Script", cursive;
   font-size: 19px;
   letter-spacing: 1px;
   word-spacing: 5px;
   text-align: center;
-  color:#585ACE
-
+  color: #585ace;
 }
 
 img {
-    border-radius: 50%;
-    width: 150px;
-    border: 5px solid #00acb0;
-    /* display: block;
-  margin: 0 auto; */
-    /* margin-left: auto;
-    margin-right: auto; */
-    
-  }
+  border-radius: 50%;
+  width: 150px;
+  border: 5px solid lightcyan;
+  margin-top: 20px;
 
-  .grid-container {
-    display: grid;
-    /* grid-template-columns: repeat(2, 1fr); */
-    grid-gap: 20px;
-    margin-top: 20px;
-  }
-  
-  /* .grid-item {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-  } */
+  /* display: block;
+  margin: 0 auto; */
+  /* margin-left: auto;
+    margin-right: auto; */
+}
+
+#edit-bttn {
+  color: #c3d74f;
+  position: absolute;
+  margin-top: 20px;
+
+  transform: translateX(-50%);
+  width: 100px;
+  height: 30px;
+  background-color: #585ace;
+  font-weight: bolder;
+  border-radius: 12px;
+  font-size: medium;
+}
+
+#edit-bttn:hover {
+  color: #585ace;
+  background-color: #c3d74f;
+  transition: 0.2s;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+#delete-bttn {
+  color: #c3d74f;
+  /* position: absolute; */
+  margin-top: 3px;
+  margin-left: 70px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 25px;
+  background-color: #585ace;
+  font-weight: bolder;
+  border-radius: 12px;
+  font-size: small;
+}
+
+#new-bttn {
+  background-color: #c3d74f;
+  /* position: relative; */
+  margin-top: 40px;
+
+  /* transform: translateX(-50%); */
+  width: 100px;
+  height: 30px;
+  color: #585ace;
+  font-weight: bolder;
+  border-radius: 12px;
+  font-size: medium;
+  margin-left: 80px;
+}
+
+#past-games {
+  margin-top: 80px;
+  font-size: 38px;
+  color: #00acb0;
+}
+
+#games {
+  font-size: 24px;
+  line-height: 1.5;
+ 
+}
+
+.grid-container {
+  display: grid;
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-gap: 20px;
+  margin-top: 20px;
+}

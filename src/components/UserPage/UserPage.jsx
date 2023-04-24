@@ -53,32 +53,35 @@ function UserPage() {
   }
 
   return (
-    <div id="paper">
+    <div id="user-paper">
   <div id="pattern">
     <div id="content">
     <div className="container">
+    <h1 id='user-header'>Welcome, {user.username}!</h1>
       <img src={user.image_url} />
+  
       <br></br>
-      <button onClick={handleEditClick}>Edit Photo</button>
-      <h2>Welcome, {user.username}!</h2>
+      <button id='edit-bttn' onClick={handleEditClick}>Edit Image</button>
+     <br></br>
       {/* <p>Your ID is: {user.id}</p> */}
-     <h2>Your Games</h2>
+     <h2 id='past-games'>Your Games</h2>
       {games &&
         games.map((game) => (
-          <div className="grid-item" key={game.id}>
+          <div id='games' className="grid-item" key={game.id}>
           <p>
+            Abode: {game.MASH}<br/>
             Pet: {game.pets}<br />
             Vehicle: {game.vehicle}<br />
             City: {game.city}<br />
             Hobby: {game.hobby}<br />
           </p>
-          <button onClick={() => handleDelete(game.id)}>Delete</button>
+          <button id='delete-bttn' onClick={() => handleDelete(game.id)}>Delete</button>
         </div>
         ))}
 <br></br>
       <LogOutButton className="btn" />
 
-      <button onClick={toNewGame}>New Game</button>
+      <button id='new-bttn' onClick={toNewGame}>New Game</button>
     </div>
     </div>
     </div>

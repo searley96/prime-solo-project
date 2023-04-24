@@ -5,7 +5,7 @@ body {
 }
 
 /* styling paper */
-#pet-paper {
+#vehicle-paper {
   width: 600px;
   height: 60vh;
   position: relative;
@@ -17,7 +17,7 @@ body {
 }
 
 /* styling red vertical line */
-#pet-paper::before {
+#paper::before {
   content: "";
   width: 2px;
   height: 100%;
@@ -63,9 +63,3 @@ input[type="text"] {
   transition: 0.2s;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
 }
-
-/* #next-bttn:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(2px);
-  } */

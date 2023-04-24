@@ -10,7 +10,6 @@ function Pet() {
   const [petOne, setPetOne] = useState("");
   const [petTwo, setPetTwo] = useState("");
   const [petThree, setPetThree] = useState("");
-  const [petFour, setPetFour] = useState("");
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -27,7 +26,6 @@ function Pet() {
         petOne: petOne,
         petTwo: petTwo,
         petThree: petThree,
-        petFour: petFour,
       },
     });
     console.log(petOne);
@@ -35,8 +33,10 @@ function Pet() {
   };
 
   return (
-    <div>
-      <h1>Which pet will you own?</h1>
+    <div id="pet-paper">
+      <div id="pattern">
+    <div id="content">
+      <h1>What kind of pet will you own?</h1>
 
       <form id="pet" onSubmit={savePetInputs}>
         <h3>Submit at least two answers!</h3>
@@ -58,14 +58,11 @@ function Pet() {
           value={petThree.inputs}
           onChange={(event) => setPetThree(event.target.value)}
         ></input>
-        <input
-          type="text"
-          placeholder="Pet Four"
-          value={petFour.inputs}
-          onChange={(event) => setPetFour(event.target.value)}
-        ></input>
-        <button type="submit">Next</button>
+        <br></br>
+        <button id='next-bttn' type="submit">Next</button>
       </form>
+    </div>
+    </div>
     </div>
   );
 }
