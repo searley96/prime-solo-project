@@ -29,7 +29,7 @@ function ViewAllPage() {
       type: "POST_RESULTS",
       payload: { user: user.id, pet: pet, vehicle: vehicle, city: city, hobby: hobby }
     });
-    history.push("/results");
+    history.push("/spiral");
   };
 
 

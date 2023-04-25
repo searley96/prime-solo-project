@@ -24,8 +24,10 @@ import Vehicle from "../GamePages/Vehicle";
 import City from "../GamePages/City";
 import Hobby from "../GamePages/Hobby";
 import ViewAllPage from "../ViewAllPage/ViewAllPage";
+import Spiral from "../SpiralPage/SpiralPage";
 import ResultsPage from "../ResultsPage/ResultsPage";
 import EditForm from "../EditForm/EditForm";
+
 
 import "./App.css";
 
@@ -126,6 +128,10 @@ function App() {
 
           <Route path="/viewAll">
             <ViewAllPage />
+          </Route>
+
+          <Route path="/spiral">
+            <Spiral />
           </Route>
 
           <Route path="/results">
