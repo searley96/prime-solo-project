@@ -1,48 +1,50 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
-
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useEffect } from "react";
 
 function EditForm() {
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-    const dispatch = useDispatch();
-    const history = useHistory();
-    const editImage = useSelector((store) => store.editImage);
+  const [editURL, setEditURL] = useState('')
 
-    function handleChange(event) {
-        dispatch({
-            type: 'EDIT_ONCHANGE', 
-            payload: { property: 'image_url', value: event.target.value}
-        })
-    }
+//   const editImage = useSelector((store) => store.editReducer);
 
-    function handleSubmit(event) {
-        event.preventDefault();
+  const user = useSelector((store => store.user))
 
-        axios.put(`/user/${editImage.id}`, editImage)
-        .then(response => {
-          dispatch({ type: 'EDIT_CLEAR'})
-          history.push('/')
-        })
-        .catch(error => {
-          console.log('error on PUT', error)
-        })
-        };
-    
+   //gets image from user table
+   useEffect(() => {
+    dispatch({ type: 'FETCH_IMAGE' });
+  }, []);
 
-return (
+
+const editItem = (incomingURL) => {
+    // first check the URL input; if blank, change the URL to the existing one
+    if (editURL === '') {
+        setEditURL(incomingURL)
+      }
+      dispatch({
+        type: 'EDIT_IMAGE',
+        payload: {
+            userId: user.id,
+          image_url: editURL,
+        }
+      })
+}
+
+  return (
     <>
-    <h1>Edit Image</h1>
-    <form onSubmit={handleSubmit}>
-        <input onChange={(event) => handleChange(event)}
-        placeholder='Image'
-        value={editImage.image_url}
-        />
-     <input type='submit' value='Update Image' />
-       
-    </form>
-
+      <h1>Edit Image</h1>
+      <h1 id='user-header'>Welcome, {user.username}!</h1>
+      <img src={user.image_url} />
+      
+      <form onSubmit={() => editItem(user.id, user.image_url)} id= {user.id}>
+      <input placeholder="new image url" value={editURL} onChange={(event) => setEditURL(event.target.value)} />
+      <button type="submit" >Submit Edit</button>
+      </form>
     </>
-)
+  );
 }
 
 export default EditForm;

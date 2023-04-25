@@ -6,17 +6,15 @@ import { useEffect } from "react";
 import './UserPage.css'
 
 //🔴TO-DO: default profile image displayed, ability to edit profile image
-//🔴TO-DO: GRID VIEW BY GAME -- Can delete each game
 
-//this page is where previous saved games will be listed
-//delete and view buttons next to each saved game
 
-function UserPage() {
+function UserPage(props) {
   // this component doesn't do much to start, just renders some user reducer info to the DOM
   const user = useSelector((store) => store.user);
 
   //gets games from store
   const games = useSelector((store) => store.gamesReducer);
+
 
   console.log("saved games", games);
 
@@ -30,6 +28,11 @@ function UserPage() {
   //gets past games from database on load
   useEffect(() => {
     dispatch({ type: "FETCH_GAMES" });
+  }, []);
+
+  //gets image from user table
+  useEffect(() => {
+    dispatch({ type: 'FETCH_IMAGE' });
   }, []);
 
   //will take user to first game play page when new game button clicked
@@ -48,7 +51,10 @@ function UserPage() {
   //🔴TO-DO: default profile image displayed, ability to edit profile image
   function handleEditClick() {
     console.log("in handleEditClick");
-    // dispatch({type: 'SET_EDIT_IMAGE', payload: })
+    //dispatch to store this user info in redux
+    dispatch({ type: 'SET_EDIT_IMAGE', payload: props.user });
+
+   //route to edit form
     history.push("/edit");
   }
 

@@ -32,6 +32,23 @@ router.post('/register', (req, res, next) => {
     });
 });
 
+router.put("/:id", (req, res) => {
+  // Update this single student
+  const idToUpdate = req.params.id;
+  console.log("MY IMAGE", req.body.image_url)
+  const sqlText = `UPDATE "user" SET "image_url" = $1 WHERE id = $2`;
+  pool
+    .query(sqlText, [req.body.image_url, idToUpdate])
+    
+    .then((result) => {
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.log(`Error making database query ${sqlText}`, error);
+      res.sendStatus(500);
+    });
+});
+
 // Handles login form authenticate/login POST
 // userStrategy.authenticate('local') is middleware that we run on this route
 // this middleware will run our POST if successful

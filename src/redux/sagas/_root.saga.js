@@ -5,6 +5,7 @@ import userSaga from './user.saga';
 import getGamesSaga from './getGames.saga';
 import addResultSaga from './results.saga';
 import deleteGameSaga from './deleteGame.saga';
+import editImageSaga from './put.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -21,5 +22,6 @@ export default function* rootSaga() {
     getGamesSaga(),
     addResultSaga(),
     deleteGameSaga(),
+    editImageSaga(),
   ]);
 }
