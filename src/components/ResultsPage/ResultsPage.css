@@ -8,7 +8,7 @@ body {
 position: absolute;
 top: 5px;
 left: 41%;
-color: #FF8C00;
+color: #00acb0;;
 letter-spacing: 3px;
 font-size: 50px;
 }
@@ -18,7 +18,7 @@ font-size: 50px;
 /* styling paper */
 #results-paper {
     width: 600px;
-    height: 95vh;
+    height: 90vh;
     position: relative;
     margin: 20px auto;
     padding-top: 40px;
@@ -46,7 +46,7 @@ font-size: 50px;
 
 /* styling text content */
 #content {
-  padding-top: 28px;
+  padding-top: 30px;
   padding-left: 56px;
   padding-right: 16px;
   line-height: 15px;
@@ -62,7 +62,7 @@ font-size: 50px;
 #next-bttn {
     background-color: #C3D74F;
     position: absolute;
-    bottom: 20px;
+    bottom: 42px;
     left: 53%;
     transform: translateX(-50%);
     width: 150px;

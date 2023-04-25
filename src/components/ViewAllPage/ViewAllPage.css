@@ -33,23 +33,15 @@ body {
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
-/* styling text content */
-/* #content {
-  padding-top: 22px;
-} */
-
-
 ul {
-    list-style-type: none;
-    padding: 0; 
-    margin: 0; 
-
-  }
-
- 
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  line-height: 15px;
+}
 
 #next-bttn {
-  background-color: #C3D74F;
+  background-color: #c3d74f;
   /* position: absolute; */
   bottom: 100px;
   left: 50%;
@@ -59,12 +51,13 @@ ul {
   color: #585ace;
   font-weight: bolder;
   border-radius: 12px;
-  font-size:large;
+  font-size: large;
 }
 
 #next-bttn:hover {
   background-color: #585ace;
-  color: #C3D74F;
+  color: #c3d74f;
   transition: 0.2s;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19)
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
