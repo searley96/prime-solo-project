@@ -163,7 +163,22 @@ router.delete("/delete/:id", rejectUnauthenticated, (req, res) => {
     });
 });
 
-
-
+//get random game from database
+router.get("/random", rejectUnauthenticated, (req, res) => {
+  // GET route code to get latest games
+  let queryText = `SELECT * 
+  FROM random_game_result
+  ORDER BY RANDOM()
+  LIMIT 1;`;
+  pool
+    .query(queryText)
+    .then((result) => {
+      res.send(result.rows);
+    })
+    .catch((error) => {
+      console.log(error);
+      res.sendStatus(500);
+    });
+});
 
 module.exports = router;

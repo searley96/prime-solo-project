@@ -7,6 +7,7 @@ import cityReducer from './city.reducer';
 import hobbyReducer from './hobby.reducer';
 import gamesReducer from './getGames.reducer';
 import latestReducer from './latestGames.reducer';
+import randomReducer from './randomGame.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -23,6 +24,7 @@ const rootReducer = combineReducers({
   hobbyReducer,
   gamesReducer,
   latestReducer,
+  randomReducer,
 });
 
 export default rootReducer;

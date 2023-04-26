@@ -6,6 +6,7 @@ import './ResultsPage.css'
 
 function ResultsPage() {
   const latestGame = useSelector((store) => store.latestReducer);
+  
   console.log("This is latestGame", latestGame);
 
   const history = useHistory();

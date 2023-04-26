@@ -27,6 +27,7 @@ import ViewAllPage from "../ViewAllPage/ViewAllPage";
 import Spiral from "../SpiralPage/SpiralPage";
 import ResultsPage from "../ResultsPage/ResultsPage";
 import EditForm from "../EditForm/EditForm";
+import RandomGame from "../RandomGame/RandomGame";
 
 
 import "./App.css";
@@ -108,6 +109,10 @@ function App() {
               // Otherwise, show the Landing page
               <LandingPage />
             )}
+          </Route>
+
+          <Route path="/random">
+            <RandomGame />
           </Route>
 
           <Route path="/pet">

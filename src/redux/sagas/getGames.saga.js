@@ -25,10 +25,23 @@ function* getLatestGame() {
   }
 }
 
+//saga to get random game
+function* getRandomGame() {
+  try {
+    const randomGame = yield axios.get("api/games/random")
+    console.log('random game'. randomGame);
+
+    yield put({ type: 'SET_RANDOM_GAME', payload: randomGame.data })
+  }catch (error) {
+    console.log('error getting random game')
+  }
+}
+
 //for root saga
 function* getGamesSaga() {
   yield takeLatest("FETCH_GAMES", getGames),
     yield takeLatest("FETCH_LATEST_GAME", getLatestGame);
+    yield takeLatest("FETCH_RANDOM_GAME", getRandomGame)
 }
 
 export default getGamesSaga;
