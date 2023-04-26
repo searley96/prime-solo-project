@@ -30,11 +30,11 @@ function City() {
 
   return (
     <div id="city-paper">
-      <div id="pattern">
-        <div id="content">
-          <h1>Where will you live?</h1>
+      <div id="city-pattern">
+        <div id="city-content">
+          <h1>Where Will You Live?</h1>
           <form id="city" onSubmit={saveCityInputs}>
-            <h3>Submit at least two answers!</h3>
+            <h3>Submit three possibilities!</h3>
             <input
               type="text"
               placeholder="City One"

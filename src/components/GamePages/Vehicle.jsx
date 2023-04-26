@@ -31,7 +31,7 @@ function Vehicle() {
         <div id="vehicle-content">
           <h1>How Will You Get Around?</h1>
           <form id="vehicle" onSubmit={saveVehicleInputs}>
-            <h3>Submit at least two answers!</h3>
+            <h3>Submit three possibilities!</h3>
             <input
               type="text"
               placeholder="Vehicle One"

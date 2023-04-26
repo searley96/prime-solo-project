@@ -4,14 +4,6 @@ body {
   background-image: url(https://garden.spoonflower.com/c/11578583/p/f/l/CPylg_nPMUQiy_OsdzCSrO0w5SXQWRX6mj3-L3_IqGapXGQRND7h/Rainbow%20Leopard%20.jpg);
 }
 
-#user-header {
-  position: absolute;
-  top: 0px;
-  left: 30%;
-  color: #00acb0;
-  letter-spacing: 3px;
-  font-size: 50px;
-}
 
 /* styling paper */
 #user-paper {
@@ -44,7 +36,7 @@ body {
 
 /* styling text content */
 #user-content {
-  padding-top: 6px;
+  /* padding-top: 6px; */
   padding-left: 56px;
   padding-right: 16px;
   line-height: 25px;
@@ -59,8 +51,8 @@ body {
 #user-image {
   border-radius: 50%;
   width: 150px;
-  border: 5px solid pink;
-  margin-top: 20px;
+  /* border: 5px solid pink; */
+  margin-top: 80px;
 }
 
 #edit-bttn {
@@ -99,6 +91,18 @@ body {
   font-size: small;
 }
 
+#user {
+  padding-left: 55px;
+  line-height: 45px;
+  margin-bottom: 40px;
+  position: absolute;
+  top: 0px;
+  left: 30%;
+  color: #585ACE;
+  letter-spacing: 3px;
+  font-size: 50px;
+}
+
 #new-bttn {
   background-color: #c3d74f;
   /* position: relative; */
@@ -114,10 +118,11 @@ body {
   margin-left: 80px;
 }
 
-#past-games {
-  margin-top: 80px;
+#fortunes{
+  margin-top: 60px;
   font-size: 38px;
   color: #00acb0;
+  font-size: 40px;
 }
 
 #games {

@@ -29,12 +29,12 @@ function Hobby() {
 
   return (
     <div id="hobby-paper">
-      <div id="pattern">
-        <div id="content">
+      <div id="hobby-pattern">
+        <div id="hobby-content">
           <h1>What is your Special Talent?</h1>
 
           <form id="hobby" onSubmit={saveHobbyInputs}>
-            <h3>Submit at least two answers!</h3>
+            <h3>Submit three possibilities!</h3>
             <input
               type="text"
               placeholder="Talent One"

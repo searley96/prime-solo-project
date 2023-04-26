@@ -35,11 +35,11 @@ function EditForm() {
 
   return (
     <div id="edit-paper">
-      <div id="pattern">
-        <div id="content">
-          <h1>Edit Image</h1>
-          <h1 id="user-header">Welcome, {user.username}!</h1>
-          <img src={user.image_url} />
+      <div id="edit-pattern">
+        <div id="edit-content">
+          <h1 id="edit">Edit Image</h1>
+         
+          <img id="edit-img" src={user.image_url} />
 
           <form onSubmit={() => editItem(user.id, user.image_url)} id={user.id}>
             <input

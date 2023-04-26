@@ -35,8 +35,8 @@ function ViewAllPage() {
 
   return (
     <div id="viewAll-paper">
-    <div id="pattern">
-  <div id="content">
+    <div id="viewAll-pattern">
+  <div id="viewAll-content">
       <h1>M.A.S.H.</h1>
       <br></br>
       <h2>Pets:</h2>

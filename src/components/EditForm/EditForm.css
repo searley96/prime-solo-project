@@ -7,7 +7,7 @@ body {
 /* styling paper */
 #edit-paper {
   width: 600px;
-  height: vh;
+  height: 85vh;
   position: relative;
   margin: 20px auto;
   padding-top: 40px;
@@ -15,6 +15,7 @@ body {
   background-color: white;
   box-shadow: 0px 0px 5px 0px #888;
 }
+
 
 /* styling red vertical line */
 #edit-paper::before {
@@ -28,11 +29,27 @@ body {
 }
 
 /* styling blue horizontal lines */
-#pattern {
+#edit-pattern {
   height: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
+#edit-content {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: "Dancing Script", cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  text-align: center;
+  color: #585ace;
+}
+
+#edit {
+  padding-left: 25px;
+}
 
 input {
     border: none;
@@ -57,3 +74,8 @@ input {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
+
+#edit-img{
+  padding-top: 80px;
+  width:200px;
+  }

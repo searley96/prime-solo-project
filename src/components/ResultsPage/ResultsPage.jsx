@@ -23,8 +23,8 @@ const handleUser = () => {
 
   return (
     <div id="results-paper">
-    <div id="pattern">
-      <div id="content">
+    <div id="results-pattern">
+      <div id="results-content">
       <h1 id='results-header'>Results</h1>
       {latestGame &&
         latestGame.map((game) => (

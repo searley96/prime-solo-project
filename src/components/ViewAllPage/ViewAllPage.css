@@ -28,16 +28,40 @@ body {
 }
 
 /* styling blue horizontal lines */
-#pattern {
+#viewAll-pattern {
   height: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
-ul {
+#viewAll-content{
+  margin-top: 0px;
+padding-left: 56px;
+padding-right: 16px;
+line-height: 30px;
+font-family: 'Dancing Script', cursive;
+font-size: 24px;
+letter-spacing: 2px;
+word-spacing: 5px;
+text-align: center;
+color:#585ACE
+}
+
+h1 {
+  padding-top: 0px;
+}
+
+h2{
+  margin-top: 0px;
+}
+
+li {
   list-style-type: none;
   padding: 0;
   margin: 0;
-  line-height: 15px;
+  line-height: 20px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding-right: 60px;
 }
 
 #next-bttn {
