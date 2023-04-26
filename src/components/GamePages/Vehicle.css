@@ -17,7 +17,7 @@ body {
 }
 
 /* styling red vertical line */
-#paper::before {
+#vehicle-paper::before {
   content: "";
   width: 2px;
   height: 100%;
@@ -28,14 +28,24 @@ body {
 }
 
 /* styling blue horizontal lines */
-#pattern {
+#vehicle-pattern {
   height: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
 /* styling text content */
-#content {
+#vehicle-content {
   padding-top: 22px;
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: "Dancing Script", cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  text-align: center;
+  color: #585ace;
 }
 
 input[type="text"] {

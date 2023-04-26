@@ -34,12 +34,12 @@ function Pet() {
 
   return (
     <div id="pet-paper">
-      <div id="pattern">
-    <div id="content">
-      <h1>What kind of pet will you own?</h1>
+      <div id="pet-pattern">
+    <div id="pet-content">
+      <h1>What Pet Will You Own?</h1>
 
       <form id="pet" onSubmit={savePetInputs}>
-        <h3>Submit at least two answers!</h3>
+        <h3>Submit three possibilities!</h3>
         <input
           type="text"
           placeholder="Pet One"

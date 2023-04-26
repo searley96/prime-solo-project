@@ -60,11 +60,11 @@ function UserPage(props) {
 
   return (
     <div id="user-paper">
-  <div id="pattern">
-    <div id="content">
+  <div id="user-pattern">
+    <div id="user-content">
     <div className="container">
     <h1 id='user-header'>Welcome, {user.username}!</h1>
-      <img src={user.image_url} />
+      <img id="user-image" src={user.image_url} />
   
       <br></br>
       <button id='edit-bttn' onClick={handleEditClick}>Edit Image</button>

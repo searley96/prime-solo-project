@@ -27,8 +27,8 @@ function Vehicle() {
 
   return (
     <div id="vehicle-paper">
-      <div id="pattern">
-        <div id="content">
+      <div id="vehicle-pattern">
+        <div id="vehicle-content">
           <h1>How Will You Get Around?</h1>
           <form id="vehicle" onSubmit={saveVehicleInputs}>
             <h3>Submit at least two answers!</h3>
