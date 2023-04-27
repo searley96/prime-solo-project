@@ -15,6 +15,8 @@ function RandomGame() {
     dispatch({ type: "FETCH_RANDOM_GAME" });
   }, []);
 
+  
+
   return (
     <div id="user-paper">
       <div id="user-pattern">

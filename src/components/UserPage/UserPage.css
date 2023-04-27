@@ -4,7 +4,6 @@ body {
   background-image: url(https://garden.spoonflower.com/c/11578583/p/f/l/CPylg_nPMUQiy_OsdzCSrO0w5SXQWRX6mj3-L3_IqGapXGQRND7h/Rainbow%20Leopard%20.jpg);
 }
 
-
 /* styling paper */
 #user-paper {
   width: 600px;
@@ -78,7 +77,7 @@ body {
 }
 
 #delete-bttn {
-  color: #585ace;;
+  color: #585ace;
   /* position: absolute; */
   margin-top: 3px;
   margin-left: 70px;
@@ -98,27 +97,32 @@ body {
   position: absolute;
   top: 0px;
   left: 30%;
-  color: #585ACE;
+  color: #585ace;
   letter-spacing: 3px;
   font-size: 50px;
 }
 
-#new-bttn {
+#new-bttn,
+#random-bttn {
   background-color: #c3d74f;
   /* position: relative; */
   margin-top: 40px;
 
   /* transform: translateX(-50%); */
   width: 100px;
-  height: 30px;
+  height: 40px;
   color: #585ace;
   font-weight: bolder;
   border-radius: 12px;
   font-size: medium;
-  margin-left: 80px;
+  /* margin-left: 80px; */
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 
-#fortunes{
+#fortunes {
   margin-top: 60px;
   font-size: 38px;
   color: #00acb0;
@@ -128,7 +132,6 @@ body {
 #games {
   font-size: 24px;
   line-height: 1.5;
- 
 }
 
 .grid-container {

@@ -25,7 +25,7 @@ function* getLatestGame() {
   }
 }
 
-//saga to get random game
+// saga to get random game
 function* getRandomGame() {
   try {
     const randomGame = yield axios.get("api/games/random")
@@ -41,7 +41,7 @@ function* getRandomGame() {
 function* getGamesSaga() {
   yield takeLatest("FETCH_GAMES", getGames),
     yield takeLatest("FETCH_LATEST_GAME", getLatestGame);
-    yield takeLatest("FETCH_RANDOM_GAME", getRandomGame)
+    yield takeLatest("FETCH_RANDOM_GAME", getRandomGame);
 }
 
 export default getGamesSaga;
