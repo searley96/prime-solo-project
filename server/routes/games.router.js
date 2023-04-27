@@ -181,4 +181,19 @@ router.get("/random", rejectUnauthenticated, (req, res) => {
     });
 });
 
+router.delete("delete/:id", rejectUnauthenticated, (req, res) => {
+  // endpoint functionality
+  const queryText = `DELETE FROM "random_game_result" WHERE id=$1 AND "user_id" = $2`;
+  let queryValues = [req.params.id, req.user.id];
+  pool
+    .query(queryText, queryValues)
+    .then((result) => {
+      res.sendStatus(201);
+    })
+    .catch((error) => {
+      console.log(error);
+      res.sendStatus(500);
+    });
+});
+
 module.exports = router;

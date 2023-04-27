@@ -28,6 +28,7 @@ import Spiral from "../SpiralPage/SpiralPage";
 import ResultsPage from "../ResultsPage/ResultsPage";
 import EditForm from "../EditForm/EditForm";
 import RandomGame from "../RandomGame/RandomGame";
+import RandomSpiral from "../SpiralPage/RandomSpiral";
 
 
 import "./App.css";
@@ -104,7 +105,7 @@ function App() {
             {user.id ? (
               // If the user is already logged in,
               // redirect them to the /user page
-              <Redirect to="/user" />
+              <Redirect to="/user" replace/>
             ) : (
               // Otherwise, show the Landing page
               <LandingPage />
@@ -137,6 +138,10 @@ function App() {
 
           <Route path="/spiral">
             <Spiral />
+          </Route>
+
+          <Route path="/randomSpiral">
+            <RandomSpiral />
           </Route>
 
           <Route path="/results">

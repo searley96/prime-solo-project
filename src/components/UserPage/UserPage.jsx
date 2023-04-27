@@ -14,6 +14,8 @@ function UserPage(props) {
   //gets games from store
   const games = useSelector((store) => store.gamesReducer);
 
+  const random = useSelector((store) => store.randomReducer);
+
   console.log("saved games", games);
 
   const history = useHistory();
@@ -28,6 +30,10 @@ function UserPage(props) {
     dispatch({ type: "FETCH_GAMES" });
   }, []);
 
+  useEffect(() => {
+    dispatch({ type: "FETCH_RANDOM_GAME" });
+  }, []);
+
   //gets image from user table
   useEffect(() => {
     dispatch({ type: "FETCH_IMAGE" });
@@ -39,7 +45,7 @@ function UserPage(props) {
   };
 
   const toRandomGame = () => {
-    history.push("/random");
+    history.push("/randomSpiral");
   };
 
   const handleDelete = (id) => {
@@ -48,6 +54,10 @@ function UserPage(props) {
       type: "DELETE_GAME",
       payload: id,
     });
+  };
+
+  const handleRandomDelete = (id) => {
+    dispatch({ type: "DELETE_RANDOM_GAME", payload: id });
   };
 
   //🔴TO-DO: default profile image displayed, ability to edit profile image
@@ -60,14 +70,12 @@ function UserPage(props) {
     history.push("/edit");
   }
 
-  
-
   return (
     <div id="user-paper">
       <div id="user-pattern">
         <div id="user-content">
           <div className="container">
-            <h1 id='user'>
+            <h1 id="user">
               Welcome, <br />
               {user.username}!
             </h1>
@@ -98,6 +106,29 @@ function UserPage(props) {
                   <button
                     id="delete-bttn"
                     onClick={() => handleDelete(game.id)}
+                  >
+                    Delete
+                  </button>
+                </div>
+              ))}
+            {random &&
+              random.map((randomGame) => (
+                <div id="games" className="grid-item" key={randomGame.id}>
+                  <p>
+                    Abode: {randomGame.MASH}
+                    <br />
+                    Pet: {randomGame.pets}
+                    <br />
+                    Vehicle: {randomGame.vehicle}
+                    <br />
+                    City: {randomGame.city}
+                    <br />
+                    Hobby: {randomGame.hobby}
+                    <br />
+                  </p>
+                  <button
+                    id="delete-bttn"
+                    onClick={() => handleRandomDelete(randomGame.id)}
                   >
                     Delete
                   </button>
