@@ -131,6 +131,32 @@ router.post("/", rejectUnauthenticated, (req, res) => {
     });
 });
 
+router.post("/", rejectUnauthenticated, (req, res) => {
+  // this simply adds items to the row; rejectUnauthenticated means it doesn't run if a user isn't logged in.
+  const sqlText = `INSERT INTO "game_result"
+  ("user_id", "pets", "vehicle", "city", "hobby", "MASH")
+  VALUES ($1, $2, $3, $4, $5, $6)`;
+  //remember to use 'req.user.id' instead of req.body.user_id
+  const sqlParams = [
+    req.user.id,
+    req.body.pets,
+    req.body.vehicle,
+    req.body.city,
+    req.body.hobby,
+    req.body.MASH,
+  ];
+
+  pool
+    .query(sqlText, sqlParams)
+    .then((result) => {
+      res.sendStatus(201);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.sendStatus(500);
+    });
+});
+
 router.get("/latest", rejectUnauthenticated, (req, res) => {
   // GET route code to get latest games
   let queryText = `SELECT * FROM "game_result" ORDER BY "id" DESC LIMIT 1`;

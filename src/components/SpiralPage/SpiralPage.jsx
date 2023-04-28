@@ -13,10 +13,11 @@ function Spiral() {
     setTimeout(() => {
       // Move to the next page after 5 seconds
       history.push("/results");
-    }, 5000);
+    }, 3000);
   }
   useEffect(() => {
     spiralSpin();
+    window.scrollTo(0, 0); // Scrolls to the top of the page
   }, []);
 
   return (

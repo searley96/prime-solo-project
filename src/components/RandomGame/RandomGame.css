@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+body {
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: url(https://garden.spoonflower.com/c/11578583/p/f/l/CPylg_nPMUQiy_OsdzCSrO0w5SXQWRX6mj3-L3_IqGapXGQRND7h/Rainbow%20Leopard%20.jpg);
+}
+
+/* styling paper */
+#random-paper {
+  width: 600px;
+  height: 125vh;
+  position: relative;
+  margin: 20px auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 0px #888;
+}
+
+
+/* styling red vertical line */
+#random-paper::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 40px;
+  background-color: #00acb0;
+}
+
+/* styling blue horizontal lines */
+#random-pattern {
+  height: 100%;
+  background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+
+#random-content {
+  padding-top: 6px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 25px;
+  font-family: "Dancing Script", cursive;
+  font-size: 19px;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  text-align: center;
+  color: #585ace;
+}
+
+#home-bttn {
+  background-color: #c3d74f;
+  position: absolute;
+  bottom: 42px;
+  left: 53%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 50px;
+  color: #585ace;
+  font-weight: bolder;
+  border-radius: 12px;
+  font-size: large;
+}

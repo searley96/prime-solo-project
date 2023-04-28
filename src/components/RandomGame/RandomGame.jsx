@@ -2,6 +2,8 @@ import React from "react";
 import "./RandomGame.css";
 import { Dispatch, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import './RandomGame.css'
 
 function RandomGame() {
 
@@ -9,18 +11,30 @@ function RandomGame() {
 
     const dispatch = useDispatch();
 
+    const history = useHistory();
+
     console.log('this is randomGame', randomGame)
 
   useEffect(() => {
     dispatch({ type: "FETCH_RANDOM_GAME" });
   }, []);
 
-  
+  //dispatch data to saga
+  //POST_RESULTS to randomResults saga
+  const handleSubmit = () => {
 
-  return (
-    <div id="user-paper">
-      <div id="user-pattern">
-        <div id="user-content">
+    dispatch({
+      type: "POST_RANDOM_RESULTS",
+      payload: { randomGame: randomGame }
+    });
+    history.push("/user");
+  };
+
+
+return (
+    <div id="random-paper">
+      <div id="random-pattern">
+        <div id="random-content">
           <div className="container">
             <h1>Random Game</h1>
             <h2>Results</h2>
@@ -44,6 +58,7 @@ function RandomGame() {
             <h3>{game.hobby}</h3>
           </div>
         ))}
+        <button id='home-bttn' onClick={handleSubmit}>Home</button>
           </div>
         </div>
       </div>
