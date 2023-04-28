@@ -26,7 +26,7 @@ const handleUser = () => {
     <div id="results-paper">
     <div id="results-pattern">
       <div id="results-content">
-      <h1 id='results-header'>Results</h1>
+      <h1 id='results-header'>Your Fourtune:</h1>
       {latestGame &&
         latestGame.map((game) => (
           <div key={game.id}>

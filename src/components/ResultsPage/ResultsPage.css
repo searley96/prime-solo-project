@@ -7,7 +7,7 @@ body {
 #results-header {
   position: absolute;
   top: 5px;
-  left: 41%;
+  left: 29%;
   color: #585ace;
   letter-spacing: 3px;
   font-size: 50px;
@@ -17,7 +17,7 @@ body {
 /* styling paper */
 #results-paper {
   width: 600px;
-  height: 95vh;
+  height: 83vh;
   position: relative;
   margin: 20px auto;
   padding-top: 40px;

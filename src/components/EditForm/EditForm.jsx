@@ -16,6 +16,7 @@ function EditForm() {
 
   //gets image from user table
   useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
     dispatch({ type: "FETCH_IMAGE" });
   }, []);
 

@@ -4,10 +4,19 @@ body {
   background-image: url(https://garden.spoonflower.com/c/11578583/p/f/l/CPylg_nPMUQiy_OsdzCSrO0w5SXQWRX6mj3-L3_IqGapXGQRND7h/Rainbow%20Leopard%20.jpg);
 }
 
+#mash {
+  /* padding-bottom: 20px; */
+  position: absolute;
+  top: 0;
+  left: 47px;
+  right: 0;
+  z-index: 1;
+}
+
 /* styling paper */
 #viewAll-paper {
   width: 600px;
-  height: 110vh;
+  height: 105vh;
   position: relative;
   margin: 20px auto;
   padding-top: 40px;
@@ -33,24 +42,25 @@ body {
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
-#viewAll-content{
+#viewAll-content {
   margin-top: 0px;
-padding-left: 56px;
-padding-right: 16px;
-line-height: 30px;
-font-family: 'Dancing Script', cursive;
-font-size: 24px;
-letter-spacing: 2px;
-word-spacing: 5px;
-text-align: center;
-color:#585ACE
+  padding-top: 39px;
+  padding-left: 56px;
+  padding-right: 16px;
+  line-height: 37px;
+  font-family: "Dancing Script", cursive;
+  font-size: 28px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  text-align: center;
+  color: #585ace;
 }
 
 h1 {
   padding-top: 0px;
 }
 
-h2{
+h2 {
   margin-top: 0px;
 }
 

@@ -31,17 +31,20 @@ function UserPage(props) {
 
   //gets past games from database on load
   useEffect(() => {
+    window.scrollTo(0, 0); // Scrolls to the top of the page
     dispatch({ type: "FETCH_GAMES" });
-  }, []);
-
-  useEffect(() => {
     dispatch({ type: "FETCH_RANDOM_GAME" });
-  }, []);
-
-  //gets image from user table
-  useEffect(() => {
     dispatch({ type: "FETCH_IMAGE" });
   }, []);
+
+  // useEffect(() => {
+  //   dispatch({ type: "FETCH_RANDOM_GAME" });
+  // }, []);
+
+  //gets image from user table
+  // useEffect(() => {
+  //   dispatch({ type: "FETCH_IMAGE" });
+  // }, []);
 
   //will take user to first game play page when new game button clicked
   const toNewGame = () => {
@@ -144,10 +147,13 @@ function UserPage(props) {
             <br></br>
             <LogOutButton className="btn" />
 
+            <button id="random-bttn" onClick={toRandomGame}>
+              Random Game
+            </button>
+
             <button id="new-bttn" onClick={toNewGame}>
               New Game
             </button>
-            <button id='random-bttn' onClick={toRandomGame}>Random Game</button>
           </div>
         </div>
       </div>

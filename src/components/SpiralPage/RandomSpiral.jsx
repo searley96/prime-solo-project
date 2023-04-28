@@ -13,7 +13,7 @@ function RandomSpiral() {
     setTimeout(() => {
       // Move to the next page after 5 seconds
       history.push("/random");
-    }, 5000);
+    }, 3000);
   }
   useEffect(() => {
     spiralSpin();

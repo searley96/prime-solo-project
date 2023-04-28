@@ -1,13 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
-body {
-  background-color: rgba(0, 0, 0, 0.1);
-  background-image: url(https://garden.spoonflower.com/c/11578583/p/f/l/CPylg_nPMUQiy_OsdzCSrO0w5SXQWRX6mj3-L3_IqGapXGQRND7h/Rainbow%20Leopard%20.jpg);
-}
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 /* styling paper */
-#edit-paper {
+#about-paper {
   width: 600px;
-  height: 60vh;
+  height: 100vh;
   position: relative;
   margin: 20px auto;
   padding-top: 40px;
@@ -17,7 +13,7 @@ body {
 }
 
 /* styling red vertical line */
-#edit-paper::before {
+#about-paper::before {
   content: "";
   width: 2px;
   height: 100%;
@@ -28,31 +24,32 @@ body {
 }
 
 /* styling blue horizontal lines */
-#edit-pattern {
+#about-pattern {
   height: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
 }
 
-#edit-content {
+#about {
+  line-height: 40px;
+  position: relative;
+  top: -150px;
+  font-family: "Dancing Script", cursive;
+  margin-bottom: -110px;
+}
+
+#about-content {
   padding-left: 56px;
   padding-right: 16px;
   line-height: 25px;
-  font-family: "Dancing Script", cursive;
-  font-size: 19px;
-  letter-spacing: 1px;
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
   word-spacing: 5px;
   text-align: center;
   color: #585ace;
-}
-
-#edit {
-  position: absolute;
-  top: 5px;
-  left: 38%;
-  color: #585ace;
-  letter-spacing: 3px;
-  font-size: 40px;
-  /* line-height: 40px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 input {
@@ -77,10 +74,4 @@ input {
   transition: 0.2s;
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-}
-
-#edit-img {
-  padding-top: 60px;
-  width: 200px;
-  /* border-radius: 50%; */
 }

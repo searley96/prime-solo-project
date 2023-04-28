@@ -27,29 +27,22 @@ Button
 -------------------------------------------------------------------------------- */
 
 .btn {
-  /* display: inline-block;
-  padding: 10px 20px;
-  border-color: #014041;
-  border-width: 1px 1px 3px;
-  border-radius: 4px;
-  background-color: #00acb0;
-  color: #f8f8f8;
-  font-size: 1.1rem;
-  outline: 0;
-  cursor: pointer; */
-
-  color: #c3d74f;
+  background-color: #585ace;
   /* position: relative; */
-  margin-top: 20px;
+  margin-top: 40px;
 
   /* transform: translateX(-50%); */
   width: 100px;
-  height: 30px;
-  background-color: #585ace;
+  height: 40px;
+  color: #c3d74f;
   font-weight: bolder;
   border-radius: 12px;
   font-size: medium;
-  margin-right: 50px;
+  /* margin-left: 80px; */
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 
 .btn_sizeMin {

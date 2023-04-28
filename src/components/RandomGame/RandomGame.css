@@ -7,7 +7,7 @@ body {
 /* styling paper */
 #random-paper {
   width: 600px;
-  height: 125vh;
+  height: 100vh;
   position: relative;
   margin: 20px auto;
   padding-top: 40px;
@@ -15,6 +15,7 @@ body {
   background-color: white;
   box-shadow: 0px 0px 5px 0px #888;
 }
+
 
 
 /* styling red vertical line */
@@ -32,6 +33,21 @@ body {
 #random-pattern {
   height: 100%;
   background-image: repeating-linear-gradient(white 0px, white 24px, teal 25px);
+}
+ 
+#random-game{
+    position: absolute;
+    top: 5px;
+    left: 22%;
+    color: #585ace;
+    letter-spacing: 3px;
+    font-size: 40px;
+    /* line-height: 40px; */
+}
+
+#random-results{
+padding-top: 60px;
+font-size: 40px;
 }
 
 #random-content {

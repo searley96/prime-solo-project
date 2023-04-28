@@ -36,8 +36,7 @@ return (
       <div id="random-pattern">
         <div id="random-content">
           <div className="container">
-            <h1>Random Game</h1>
-            <h2>Results</h2>
+            <h1 id="random-game">Your Random Fortune:</h1>
             {randomGame &&
         randomGame.map((game) => (
           <div key={game.id}>
