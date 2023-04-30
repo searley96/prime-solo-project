@@ -8,6 +8,7 @@ function City() {
   const [cityOne, setCityOne] = useState("");
   const [cityTwo, setCityTwo] = useState("");
   const [cityThree, setCityThree] = useState("");
+  const [error, setError] = useState("");
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -15,6 +16,10 @@ function City() {
   //handler for collecting data, pushing user to next page
   //dispatch saved input
   const saveCityInputs = () => {
+    if (!cityOne || !cityTwo || !cityThree) {
+      setError("Please enter three cities.");
+      return;
+    }
     event.preventDefault();
     dispatch({
       type: "SAVE_CITY",
@@ -53,6 +58,7 @@ function City() {
               value={cityThree.inputs}
               onChange={(event) => setCityThree(event.target.value)}
             ></input>
+            {error && <p className="error">{error}</p>}
             <button id="next-bttn" type="submit">
               Next
             </button>

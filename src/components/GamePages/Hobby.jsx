@@ -8,12 +8,16 @@ function Hobby() {
   const [hobbyOne, setHobbyOne] = useState("");
   const [hobbyTwo, setHobbyTwo] = useState("");
   const [hobbyThree, setHobbyThree] = useState("");
-  
+  const [error, setError] = useState("");
 
   const dispatch = useDispatch();
   const history = useHistory();
 
   const saveHobbyInputs = () => {
+    if (!hobbyOne || !hobbyTwo || !hobbyThree) {
+      setError("Please enter three hobbies.");
+      return;
+    }
     event.preventDefault();
     dispatch({
       type: "SAVE_HOBBY",
@@ -53,7 +57,7 @@ function Hobby() {
               value={hobbyThree.inputs}
               onChange={(event) => setHobbyThree(event.target.value)}
             ></input>
-      
+            {error && <p className="error">{error}</p>}
             <button id="next-bttn" type="submit">
               Next
             </button>
