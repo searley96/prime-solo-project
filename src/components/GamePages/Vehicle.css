@@ -51,6 +51,8 @@ body {
 input[type="text"] {
   border: none;
   border-bottom: 2px solid #585ace;
+  font-size: 24px; /* increase the font size */
+  padding: 10px 15px; /* increase the top and bottom padding */
 }
 
 #next-bttn {

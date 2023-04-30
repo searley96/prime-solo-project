@@ -10,6 +10,7 @@ function Pet() {
   const [petOne, setPetOne] = useState("");
   const [petTwo, setPetTwo] = useState("");
   const [petThree, setPetThree] = useState("");
+  
 
   const dispatch = useDispatch();
   const history = useHistory();

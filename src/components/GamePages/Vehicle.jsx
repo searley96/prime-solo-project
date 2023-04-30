@@ -10,8 +10,13 @@ function Vehicle() {
   const [vehicleOne, setVehicleOne] = useState("");
   const [vehicleTwo, setVehicleTwo] = useState("");
   const [vehicleThree, setVehicleThree] = useState("");
+  const [error, setError] = useState("");
 
   const saveVehicleInputs = () => {
+    if (!vehicleOne || !vehicleTwo || !vehicleThree) {
+      setError("Please enter three vehicles.");
+      return;
+    }
     event.preventDefault();
     dispatch({
       type: "SAVE_VEHICLE",
@@ -50,6 +55,7 @@ function Vehicle() {
               value={vehicleThree.inputs}
               onChange={(event) => setVehicleThree(event.target.value)}
             ></input>
+             {error && <p className="error">{error}</p>}
             <button id="next-bttn" type="submit">
               Next
             </button>
