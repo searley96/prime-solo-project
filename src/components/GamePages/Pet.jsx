@@ -10,7 +10,8 @@ function Pet() {
   const [petOne, setPetOne] = useState("");
   const [petTwo, setPetTwo] = useState("");
   const [petThree, setPetThree] = useState("");
-  
+  const [error, setError] = useState("");
+
 
   const dispatch = useDispatch();
   const history = useHistory();
@@ -20,6 +21,10 @@ function Pet() {
   //different payload for each input?
 
   const savePetInputs = () => {
+    if (!petOne || !petTwo || !petThree) {
+      setError("Please enter three pets.");
+      return;
+    }
     event.preventDefault();
     dispatch({
       type: "SAVE_PET",
@@ -60,6 +65,7 @@ function Pet() {
           onChange={(event) => setPetThree(event.target.value)}
         ></input>
         <br></br>
+        {error && <p className="error">{error}</p>}
         <button id='next-bttn' type="submit">Next</button>
       </form>
     </div>
