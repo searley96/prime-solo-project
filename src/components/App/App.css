@@ -31,7 +31,7 @@ Button
   /* position: relative; */
   margin-top: 40px;
 
-  /* transform: translateX(-50%); */
+  transform: translateX(-50%);
   width: 100px;
   height: 40px;
   color: #c3d74f;
@@ -39,10 +39,10 @@ Button
   border-radius: 12px;
   font-size: medium;
   /* margin-left: 80px; */
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: top;
   margin-top: 40px;
-  margin-left: 20px;
+  margin-left: 100px;
 }
 
 .btn_sizeMin {
@@ -61,8 +61,9 @@ Button
 }
 
 .btn:hover {
-  background-color: #008183;
+  background-color: #c3d74f;
   text-decoration: none;
+  color: #585ace;
 }
 
 /* This line makes the "Register" and "Login" buttons look like links */

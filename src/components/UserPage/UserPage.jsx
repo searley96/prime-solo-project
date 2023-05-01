@@ -24,7 +24,10 @@ function UserPage(props) {
 
   const dispatch = useDispatch();
 
-  const [showRandomGame, setShowRandomGame] = useState(true);
+  // const [showImage, setShowImage] = useState(false);
+
+  const [showRandomGame, setShowRandomGame] = useState(false);
+
 
   //FOR MODAL
   // const [deleteItemId, setDeleteItemId] = useState(null);
@@ -37,9 +40,9 @@ function UserPage(props) {
     dispatch({ type: "FETCH_IMAGE" });
   }, []);
 
-  // useEffect(() => {
-  //   dispatch({ type: "FETCH_RANDOM_GAME" });
-  // }, []);
+  useEffect(() => {
+    dispatch({ type: "FETCH_RANDOM_GAME" });
+  }, []);
 
   //gets image from user table
   // useEffect(() => {
@@ -86,7 +89,10 @@ function UserPage(props) {
               Welcome, <br />
               {user.username}!
             </h1>
-            <img id="user-image" src={user.image_url} />
+            
+ <img id="user-image" src={user.image_url} onClick={() => setShowRandomGame(true)} />
+
+
 
             <br></br>
             <button id="edit-bttn" onClick={handleEditClick}>
@@ -118,32 +124,32 @@ function UserPage(props) {
                   </button>
                 </div>
               ))}
-            {random &&
-              random.map(
-                (randomGame) =>
-                  showRandomGame && ( // check if showRandomGame is true
-                    <div id="games" className="grid-item" key={randomGame.id}>
-                      <p>
-                        Abode: {randomGame.MASH}
-                        <br />
-                        Pet: {randomGame.pets}
-                        <br />
-                        Vehicle: {randomGame.vehicle}
-                        <br />
-                        City: {randomGame.city}
-                        <br />
-                        Hobby: {randomGame.hobby}
-                        <br />
-                      </p>
-                      <button
-                        id="delete-bttn"
-                        onClick={() => handleRandomDelete(randomGame.id)}
-                      >
-                        Delete
-                      </button>
-                    </div>
-                  )
-              )}
+         {random &&
+  random.map(
+    (randomGame) =>
+      showRandomGame && (
+        <div id="games" className="grid-item" key={randomGame.id}>
+          <p>
+            Abode: {randomGame.MASH}
+            <br />
+            Pet: {randomGame.pets}
+            <br />
+            Vehicle: {randomGame.vehicle}
+            <br />
+            City: {randomGame.city}
+            <br />
+            Hobby: {randomGame.hobby}
+            <br />
+          </p>
+          <button
+            id="delete-bttn"
+            onClick={() => handleRandomDelete(randomGame.id)}
+          >
+            Delete
+          </button>
+        </div>
+      )
+  )}
             <br></br>
             <LogOutButton className="btn" />
 
