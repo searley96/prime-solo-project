@@ -15,20 +15,20 @@ Screenshots of M.A.S.H. 2: Future Fortunes:
 
 
 # Built With:
-React
-Redux
-Express
-CSS
-PostgreSQL
-GSAP
+-React
+-Redux
+-Express
+-CSS
+-PostgreSQL
+-GSAP
 
 # Prerequisites
 Before you get started, make sure you have the following software installed on your computer:
 
 Node.js
-PostgreSQL
-PostgresApp
-Nodemon
+-PostgreSQL
+-PostgresApp
+-Nodemon
 
 # Installation
 Use Postgres App to create a local Postgres instance
